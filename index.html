@@ -4,48 +4,43 @@
 <meta charset="UTF-8">
 <title>Pi-power - socket control</title>
 <link href="public/pipower.css" rel="stylesheet" type="text/css">
-<!-- Add Jquery -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cyborg/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="public/pipower.js"></script>
+<link rel="manifest" href="public/manifest.json">
 <script type="text/javascript" src="public/jquery.min.js"></script>
 <script type="text/javascript" src="public/pipower.js"></script>
 </head>
 <body>
-
-<h1>Pi power web control</h1>
-
-<div id="centre">
-
-
-<table cols="3" cellspacing="0">
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">Socket 1</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_1" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_1" src="public/offbutton.png" alt="Off"></td>
-</tr>
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">Socket 2</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_2" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_2" src="public/offbutton.png" alt="Off"></td>
-</tr>
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">Socket 3</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_3" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_3" src="public/offbutton.png" alt="Off"></td>
-</tr>
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">Socket 4</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_4" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_4" src="public/offbutton.png" alt="Off"></td>
-</tr>
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">All sockets</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_all" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_all" src="public/offbutton.png" alt="Off"></td>
-</tr>
-</table>
-
-
-<p>Cmd status : <span id="status">...</span></p>
-
+<div class="jumbotron text-center">
+  <h4>Home Automation</h4>
+ <!--  <div class="alert alert-success" role="alert"><span id="status">...</span></div> -->
+</div>
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+         <p>Lounge</p>
+         <button type="button" class="btn btn-success btn-sm" id="sw_on_2">Fan On</button>
+         <button type="button" class="btn btn-danger btn-sm" id="sw_off_2">Fan Off</button>
+         <p></p>
+      </div>
+      <div class="col-md-6">
+         <p>Bedroom</p>
+         <button type="button" class="btn btn-success btn-sm" id="sw_on_1">Fan On</button>
+         <button type="button" class="btn btn-danger btn-sm" id="sw_off_1">Fan Off</button>
+         <button type="button" class="btn btn-success btn-sm" id="led_on_2">LED On</button>
+         <button type="button" class="btn btn-danger btn-sm" id="led_off_2">LED Off</button>
+         <p></p>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-md-6">
+         <p>Hallway</p>
+         <button type="button" class="btn btn-success btn-sm" id="led_on_1">LED On</button>
+         <button type="button" class="btn btn-danger btn-sm" id="led_off_1">LED Off</button>
+      </div>
+   </div>
 </div>
 
 

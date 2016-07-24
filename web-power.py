@@ -18,9 +18,11 @@
 # along with this software.  If not, see <http://www.gnu.org/licenses/>
 
 from gpiozero import Energenie
+import ledcontroller
 import bottle
 from bottle import route, request, response, template, static_file
 
+led = ledcontroller.LedController("192.168.0.150")
 sockets = [None]
 sockets.append(Energenie(1))
 sockets.append(Energenie(2))
@@ -81,6 +83,17 @@ def switchoff():
     else:
         return 'Invalid request'
         
+@app.route ('/ledoff')
+def ledoff():
+    light = int(request.query.light)
+    led.off(light)
+    return 'Turned off light {}'.format(light)
+
+@app.route ('/ledon')
+def ledon():
+    light = int(request.query.light)
+    led.on(light)
+    return 'Turned on light {}'.format(light)
 
 # Serve up the default index.html page
 @app.route ('/')

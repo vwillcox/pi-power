@@ -17,6 +17,11 @@ $('#sw_off_3').click(function(){offButtonClicked('3')});
 $('#sw_off_4').click(function(){offButtonClicked('4')});
 $('#sw_off_all').click(function(){offButtonClicked('0')});
 
+$('#led_on_1').click(function(){ledOnButtonClicked('1')});
+$('#led_off_1').click(function(){ledOffButtonClicked('1')});
+$('#led_on_2').click(function(){ledOnButtonClicked('2')});
+$('#led_off_2').click(function(){ledOffButtonClicked('2')});
+
 
 }); // end ready
 
@@ -33,6 +38,15 @@ function offButtonClicked (button) {
     $.get ('/switchoff', 'socket='+button, displayResponse);
 }
 
+// Hanled LED Simple Buttons
+function ledOffButtonClicked (led) {
+    $.get ('/ledoff', 'light='+led, displayResponse);
+}
+
+// Hanled LED Simple Buttons
+function ledOnButtonClicked (led) {
+    $.get ('/ledon', 'light='+led, displayResponse);
+}
 
 function displayResponse (data) {
     $('#status').html(data);
