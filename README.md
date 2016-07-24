@@ -1,15 +1,17 @@
 # pi-power
 
-Web interface for Raspberry Pi Energenie Pi-Mote.
+Web interface for Raspberry Pi Home Automation
+-----------------------------------------------
 
-This provides a web interface to controlling Energenie remote control sockets using the Energenie pi-mote controller on a Raspberry Pi.
-
-Visit the project web page at [PenguinTutor.com/pi-power](http://www.penguintutor.com/pi-power) 
+This provides a web interface to controlling Energenie remote control sockets, and LEDCONTROLLER on a Raspberry Pi
 
 See the INSTALL.md file for details of how to install the program.
 
-Credits:
+-----------------------------------------------
+Original Readme (Forked from PenguinTutor)
+
+Visit the project web page at [PenguinTutor.com/pi-power](http://www.penguintutor.com/pi-power) 
+-----------------------------------------------
+Original Credits go to (thank you!):
 Created by [Stewart Watkiss](https://github.com/penguintutor)
 Uses the Python Bottle and GPIO Zero Modules
-
-
