@@ -33,7 +33,7 @@ This program is available from GitHub. The latest version can be installed using
 
 ```bash
 cd /home/pi
-git clone https://github.com/penguintutor/pi-power.git
+git clone https://github.com/vwillcox/pi-power.git
 ```
 
 This will install the program into directory `/home/pi/pi-power`. If using a different directory then you will need to edit the DOCUMENT_ROOT setting within web-power.py
@@ -81,5 +81,6 @@ sudo systemctl enable web-power.service
 In addition to using the web interfact the sockets can be set to switch on and off automatically. This can be achieved using cron and the crontab configuration file. 
 
 See the following page for more details:
+https://talktech.info/
 http://www.penguintutor.com/raspberrypi/pi-power 
 
